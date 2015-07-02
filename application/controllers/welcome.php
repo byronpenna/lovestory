@@ -5,6 +5,12 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('index/index.php');
 	}
+	public function login(){
+		$loginForm 	= new stdClass();
+		$userName 	= $_POST["Username"];
+		$pass 		= $_POST["Pass"];
+
+	}
 }
 
 /* End of file welcome.php */
