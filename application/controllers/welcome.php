@@ -42,6 +42,11 @@ class Welcome extends PadreController {
 		public function register(){
 			$this->load->view("index/register.php");
 		}
+		public function logoff(){
+			$this->session->sess_destroy();
+			
+			redirect("/welcome","refresh");
+		}
 }
 
 /* End of file welcome.php */

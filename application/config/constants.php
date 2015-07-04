@@ -18,7 +18,8 @@ define('FILE_WRITE_MODE', 0666);
 define('DIR_READ_MODE', 0755);
 define('DIR_WRITE_MODE', 0777);
 define('PROJECT_NAME','/lovestory');
-
+define('PROJECT_URL', $_SERVER['DOCUMENT_ROOT'].PROJECT_NAME.'/');
+define('PROJECT_PROFILE', PROJECT_URL.'resources/profiles/');
 /*
 |--------------------------------------------------------------------------
 | File Stream Modes

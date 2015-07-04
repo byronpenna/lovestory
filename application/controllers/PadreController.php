@@ -2,18 +2,26 @@
 class PadreController extends CI_Controller
 {
 	// propiedades 
-		private $_usuarioSession;
+		public $_usuarioSession;
 	// funciones magicas
 		function __construct()
 		{
 			parent::__construct();
-			if($this->session->userdata('usuario') != null || !$this->isLoginUrl() ){
-				$_usuarioSession = $this->session->userdata('usuario');
+
+			if($this->session->userdata('usuario') != null ){
+				$this->_usuarioSession = $this->session->userdata('usuario');
 			}else{
-				redirect("/welcome","refresh");
+				if(!$this->isLoginUrl()){
+					redirect("/welcome","refresh");
+				}
+				
+				
 			}
+			
+			
 		}
 	// funciones
+
 		function isLoginUrl(){
 			$isLogin = false;
 				$ci =& get_instance();

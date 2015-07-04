@@ -4,25 +4,45 @@ class ProfileController extends PadreController
 {
 	// propiedades 
 		private $_model;
-		
 	function __construct()
 	{
 		parent::__construct();
-
+		$this->load->model("ProfileModel");
+		$this->_model = new ProfileModel();
 	}
+
 	// resultados url
 		function index(){
 			
 		}
 		function edit(){
-			$this->load->view("profile/edit.php");
+			$profilePicUrl 	= $this->_model->profilePicUrl($this->_usuarioSession->id_usuario);
+			$usuario 		= $this->_model->getUsuarioById($this->_usuarioSession->id_usuario);
+			$data = array(
+				'usuario' 		=> $usuario->usuario,
+				'profilePicUrl' => $profilePicUrl
+			);
+			$this->load->view("profile/edit.php",$data);
 		}
 	// acciones
 		function update(){
 			/*$profile = $this->doPostObject();
 			print_r($profile);
 			print_r($_FILES);*/
-			echo $_SERVER['DOCUMENT_ROOT'].PROJECT_NAME;
-			//if(move_uploaded_file($, destination))
+
+			// file
+				$path = $_FILES['flProfilePic']['name'];
+				$extension = pathinfo($path, PATHINFO_EXTENSION);
+				$profileUserFolder = PROJECT_PROFILE.$this->_usuarioSession->id_usuario."/";
+				if(!file_exists($profileUserFolder)){
+					mkdir($profileUserFolder);
+				}
+				$fileName = "profile.".$extension;
+				if(move_uploaded_file($_FILES['flProfilePic']['tmp_name'],$profileUserFolder.$fileName)){
+					echo " subida exitosamente";
+				}else{
+					echo " rayos";
+				}
+			
 		}
 }

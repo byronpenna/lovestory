@@ -1,3 +1,11 @@
+<?php 
+	if($profilePicUrl != ""){
+		$srcImg = $profilePicUrl;	
+	}else{
+		$srcImg = base_url("resources/img/generales/no-image.png");
+	}	
+	
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,13 +16,14 @@
 	<!-- scripts -->
 </head>
 <body>
+
 	<form class="frm" method="post" action=<?php echo site_url("ProfileController/update") ?> enctype="multipart/form-data">
-		<img src=<?php echo base_url("resources/img/generales/no-image.png") ?> >
+		<img src=<?php echo $srcImg ?> >
 		<input type="file" name='flProfilePic'>
 		<label>Nombre</label>	
-		<input class="form-control" name="txtNombre">
+		<input class="form-control" name="txtNombre" value=<?php echo $usuario->nombres ?> >
 		<label>Apellido</label>	
-		<input class="form-control" name="txtApellido">
+		<input class="form-control" name="txtApellido" value=<?php echo $usuario->apeliidos ?>>
 		<button class="btn">Actualizar</button>
 		<button class="btn"> Regresar</button>
 	</form>
