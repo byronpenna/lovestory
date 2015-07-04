@@ -21,6 +21,7 @@
 				  <input type="password" class="form-control" name="Pass" placeholder="Password" required=""/>     		  
 				 
 				  <button class="btn btn-lg btn-primary btn-block"  name="Submit" value="Login" type="Submit">Login</button>  			
+				  <a href=<?php echo site_url("welcome/register") ?> class="btn btn-lg btn-success btn-block" >Login</button>  			
 			</form>			
 		</div>
 	</div>

@@ -1,7 +1,7 @@
 <!-- SCRIPTS -->
 	<!-- libs -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 	<!-- propios -->
 		<link rel="stylesheet" type="text/css" href=<?php echo base_url("resources/css/global/style.css") ?>>
 		<link rel="stylesheet" type="text/css" href=<?php echo base_url("resources/css/global/media.css") ?>>
