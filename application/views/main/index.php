@@ -7,8 +7,22 @@
 
 	<!-- scripts -->
 </head>
+
 <body>
-	<h3>LoveStory</h3>
-	
+	<div class="row marginNull">
+		<div class="row marginNull headerPerfil">
+			<div class="col-lg-4">
+				<a href=<?php echo site_url("ProfileController/edit/") ?> title="Ir a perfil">
+					<img src=<?php echo base_url("resources/img/generales/no-image.png") ?>>
+				</a>
+				<h3><?php echo $usuario->nombres." ".$usuario->apeliidos ?></h3>
+			</div>
+			<div class="col-lg-8">
+				<a href=<?php echo site_url() ?>>
+					cerrar sesion
+				</a>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

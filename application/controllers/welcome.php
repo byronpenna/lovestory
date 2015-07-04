@@ -33,7 +33,8 @@ class Welcome extends PadreController {
 			$usuario = $this->_model->login($usuario);
 			if($usuario->estado){
 				$this->session->set_userdata("usuario",$usuario->usuario);
-				$this->load->view("main/index.php");
+				redirect('/MainController/index', 'refresh');
+				//$this->load->view("main/index.php");
 			}else{
 				$this->load->view("index/index.php");
 			}
