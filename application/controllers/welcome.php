@@ -3,11 +3,14 @@ include_once(APPPATH.'controllers/PadreController.php');
 class Welcome extends PadreController {
 	// propiedades 
 		private $_model;
+		private $_modelProfile;
 	// funciones magicas 
 		public function __construct(){
 			parent::__construct();
 			$this->load->model("IndexModel");
-			$this->_model = new IndexModel();
+			$this->load->model("ProfileModel");
+			$this->_model 			= new IndexModel();
+			$this->_modelProfile 	= new ProfileModel();
 		}
 		public function index()
 		{
@@ -32,6 +35,7 @@ class Welcome extends PadreController {
 				$usuario->pass 		= $pass;
 			$usuario = $this->_model->login($usuario);
 			if($usuario->estado){
+				$usuario->usuario->profilePic = $this->_modelProfile->profilePicUrl($usuario->usuario->id_usuario);
 				$this->session->set_userdata("usuario",$usuario->usuario);
 				redirect('/MainController/index', 'refresh');
 				//$this->load->view("main/index.php");

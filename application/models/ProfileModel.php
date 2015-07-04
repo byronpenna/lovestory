@@ -9,15 +9,16 @@ class ProfileModel extends PadreModel
 	}
 
 	function profilePicUrl($idUsuario){
-		$retorno 	= "";
+		$retorno 	= "resources/img/generales/no-image.png";
 		$fileName 	= $this->getProfilePicName($idUsuario);
 		if($fileName != ""){
 			$ruta 		= PROJECT_PROFILE.$idUsuario."/".$fileName."";
 			if(file_exists($ruta)){
-				$ruta = base_url("resources/profiles/".$idUsuario."/".$fileName."");
+				$ruta = "resources/profiles/".$idUsuario."/".$fileName."";
 				$retorno = $ruta;
 			}	
 		}
+		$retorno = base_url($retorno);
 		return $retorno;
 	}
 	// base de datos

@@ -3,6 +3,7 @@ class PadreController extends CI_Controller
 {
 	// propiedades 
 		public $_usuarioSession;
+		public $_srcImage;
 	// funciones magicas
 		function __construct()
 		{
