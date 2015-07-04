@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-
-class Welcome extends CI_Controller {
+include_once(APPPATH.'controllers/PadreController.php');
+class Welcome extends PadreController {
 	// propiedades 
 		private $_model;
 	// funciones magicas 
@@ -12,6 +12,15 @@ class Welcome extends CI_Controller {
 		public function index()
 		{
 			$this->load->view('index/index.php');
+		}
+		public function signup(){
+			$registro 	= $this->doPostObject();
+			$respuesta 	= $this->_model->signUp($registro);
+			if($respuesta->estado){
+				echo "Ingresado correctamente";
+			}else{
+				echo "Error al ingresar";
+			}
 		}
 		public function login(){
 			$loginForm 	= new stdClass();
@@ -30,7 +39,7 @@ class Welcome extends CI_Controller {
 			}
 		}
 		public function register(){
-			$this->load->view("index/register.php")
+			$this->load->view("index/register.php");
 		}
 }
 
