@@ -6,3 +6,9 @@
 	height: 128px;
 	border-radius: 100px;
 }
+.divTarjetaFind{
+	margin-top: 5%;
+}
+.divTarjetaFind .imgProfileFind{
+	width: 80%;
+}

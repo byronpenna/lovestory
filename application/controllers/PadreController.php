@@ -22,7 +22,10 @@ class PadreController extends CI_Controller
 			
 		}
 	// funciones
-
+		function getAjaxFrm(){
+			$frm = json_decode($_POST["form"]);
+			return $frm;
+		}
 		function isLoginUrl(){
 			$isLogin = false;
 				$ci =& get_instance();

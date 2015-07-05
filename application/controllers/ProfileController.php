@@ -24,6 +24,13 @@ class ProfileController extends PadreController
 			);
 			$this->load->view("profile/edit.php",$data);
 		}
+	// acciones ajax 
+		function findProfile(){
+			$searchObj = $this->getAjaxFrm();
+			
+			$resultado = $this->_model->findProfile($searchObj);
+			echo json_encode($resultado);			
+		}
 	// acciones
 		function update(){
 			/*$profile = $this->doPostObject();
@@ -31,9 +38,9 @@ class ProfileController extends PadreController
 			print_r($_FILES);*/
 
 			// file
-				$path = $_FILES['flProfilePic']['name'];
-				$extension = pathinfo($path, PATHINFO_EXTENSION);
-				$profileUserFolder = PROJECT_PROFILE.$this->_usuarioSession->id_usuario."/";
+				$path 				= $_FILES['flProfilePic']['name'];
+				$extension 			= pathinfo($path, PATHINFO_EXTENSION);
+				$profileUserFolder 	= PROJECT_PROFILE.$this->_usuarioSession->id_usuario."/";
 				if(!file_exists($profileUserFolder)){
 					mkdir($profileUserFolder);
 				}

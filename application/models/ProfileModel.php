@@ -22,6 +22,23 @@ class ProfileModel extends PadreModel
 		return $retorno;
 	}
 	// base de datos
+		function findProfile($obj){
+			$retorno 			= new stdClass();
+			$sql 				= "SELECT id_usuario,nombres,apeliidos FROM `usuarios` WHERE concat(nombres,' ',apeliidos) like '%".$obj->textoBusqueda."%'";
+			$retorno->noResult 	= true;
+			$this->db->trans_start();
+				$query = $this->db->query($sql);
+			$this->db->trans_complete();	
+			if($query->num_rows() > 0){
+				$retorno->noResult 	= false;
+				$retorno->perfiles = $query->result();
+			}
+			return $retorno;
+		}
+		function findProfileByEmail($obj){
+			$sql = "";
+		}
+
 		function getProfilePicName($idUsuario){
 			$name = "";
 			$data = array(
