@@ -43,7 +43,7 @@
 					</div>
 				</div>
 				<div class="row marginNull divResultadoBusqueda">
-					<!-- 
+					<!--
 					<div class="row marginNull divTarjetaFind">
 						<div class="row">
 							<div class="col-lg-4">
@@ -54,8 +54,10 @@
 							</div>	
 						</div>
 						<div class="row marginNull divControles">
-							<div class="col-lg-4">
-								poema 
+							<input type="hidden" value="-1" name="txtTipoContenido" class='txtHdContenidoSelect'>
+							<div class="col-lg-4 divTipoContenido">
+								<input type="hidden" value="1" class="txtTipoContenido">
+								<i class="fa fa-heart"></i>
 							</div>
 						</div>
 						<div class="divOpciones row marginNull hidden">
@@ -68,7 +70,8 @@
 								
 							</textarea>
 						</div>
-					</div>-->		
+					</div>
+					-->		
 				</div>
 			</div>
 		</div>

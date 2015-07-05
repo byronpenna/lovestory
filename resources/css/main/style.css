@@ -12,3 +12,9 @@
 .divTarjetaFind .imgProfileFind{
 	width: 80%;
 }
+.activeTarjeta{
+	background: pink;
+}
+.activeContenido{
+	background: blue;
+}

@@ -27,7 +27,6 @@ class ProfileController extends PadreController
 	// acciones ajax 
 		function findProfile(){
 			$searchObj = $this->getAjaxFrm();
-			
 			$resultado = $this->_model->findProfile($searchObj);
 			echo json_encode($resultado);			
 		}
