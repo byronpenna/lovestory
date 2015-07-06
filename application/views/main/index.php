@@ -10,11 +10,7 @@
 		<script type="text/javascript" src=<?php echo base_url("resources/js/main/script.js") ?> ></script>
 		<script type="text/javascript" src=<?php echo base_url("resources/js/main/functions.js") ?> ></script>
 </head>
-
 <body>
-<pre>
-	
-</pre>
 	<div class="row marginNull">
 		<div class="row marginNull headerPerfil">
 			<div class="col-lg-4">

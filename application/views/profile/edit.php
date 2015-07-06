@@ -18,8 +18,7 @@
 <body>
 
 	<form class="frm" method="post" action=<?php echo site_url("ProfileController/update") ?> enctype="multipart/form-data">
-		<img src=<?php echo $srcImg ?> >
-		<input type="file" name='flProfilePic'>
+		
 		<label>Nombre</label>	
 		<input class="form-control" name="txtNombre" value=<?php echo $usuario->nombres ?> >
 		<label>Apellido</label>	
