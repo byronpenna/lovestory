@@ -24,7 +24,12 @@ class ProfileModel extends PadreModel
 	// base de datos
 		function findProfile($obj){
 			$retorno 			= new stdClass();
-			$sql 				= "SELECT id_usuario,nombres,apeliidos FROM `usuarios` WHERE concat(nombres,' ',apeliidos) like '%".$obj->textoBusqueda."%'";
+			$sql 				= "SELECT id_usuario,nombres,apeliidos 
+									FROM `usuarios` 
+									WHERE concat(nombres,' ',apeliidos) like '%".$obj->textoBusqueda."%' 
+									AND id_usuario <> ".$obj->idUsuario."
+									";
+			//
 			$retorno->noResult 	= true;
 			$this->db->trans_start();
 				$query = $this->db->query($sql);

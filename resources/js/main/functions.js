@@ -56,7 +56,8 @@
 			}
 		});
 	}
-	function btnBuscarPersonas(){
+	function btnBuscarPersonas(frm){
+		console.log(frm);
 		actualizarCatalogo(RAIZ+"ProfileController/findProfile",frm,function(data){
 			try{
 				datos 	= jQuery.parseJSON(data);

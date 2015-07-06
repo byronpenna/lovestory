@@ -39,8 +39,6 @@
 				<?php 
 					}
 				?>
-							
-
 			</div>
 		</div>
 		<a href=<?php echo site_url("welcome/logoff") ?>>
@@ -48,7 +46,20 @@
 		</a>
 		<div class="row marginNull">
 			<div class="col-lg-3">
+
 				
+				<?php 
+				foreach ($noticias as $key => $noticia) {
+				?>
+					<div class="col-lg-12 publicacionNews">
+						<h3><?php echo $noticia->usuarioEmisor ?> le publico a <?php echo $noticia->usuarioReceptor ?> </h3>
+						<p>
+							esta es una shortdescription
+						</p>
+					</div>
+				<?php 
+				}
+				?>
 			</div>
 			<div class="col-lg-3">
 				
