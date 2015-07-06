@@ -7,6 +7,19 @@ class PublicacionesModel extends PadreModel
 	{
 		parent::__construct();
 	}
+	function getPublicaciones($idUsuario){
+		$sql ="SELECT p.*,
+				if(id_tipopublicacion = 2,'Anonimo',CONCAT(emisor.nombres,' ',emisor.apeliidos)) as usuarioEmisor
+				FROM publicaciones p
+				inner join usuarios emisor
+				on emisor.id_usuario = p.id_usuarioemisor
+				WHERE id_usuarioreceptor = ".$idUsuario."
+				limit 0,3";
+		$this->db->trans_start();
+			$query = $this->db->query($sql);
+		$this->db->trans_complete();
+		return $query->result();
+	}
 	function publicar($publicacion,$idUsuarioEmisor){
 		$retorno = new stdClass();
 		$retorno->estado = false;

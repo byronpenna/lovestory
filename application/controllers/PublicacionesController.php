@@ -11,7 +11,13 @@ class PublicacionesController extends PadreController
 		$this->_model = new PublicacionesModel();
 	}
 	// 
-		function getPublicaciones 
+		function getPublicaciones($idUsuario){
+			$sql ="SELECT * 
+					FROM publicaciones 
+					WHERE id_usuarioreceptor = ".$idUsuario."
+					limit 0,3";
+			
+		}
 	// funciones ajax
 		function publicar(){
 			$publicacion 	= $this->getAjaxFrm();

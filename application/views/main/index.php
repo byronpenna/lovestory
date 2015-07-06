@@ -12,6 +12,9 @@
 </head>
 
 <body>
+<pre>
+	
+</pre>
 	<div class="row marginNull">
 		<div class="row marginNull headerPerfil">
 			<div class="col-lg-4">
@@ -21,11 +24,28 @@
 				<h3><?php echo $usuario->nombres." ".$usuario->apeliidos ?></h3>
 			</div>
 			<div class="col-lg-8">
-				<a href=<?php echo site_url("welcome/logoff") ?>>
-					cerrar sesion
-				</a>
+				<?php 
+					foreach ($notificaciones as $key => $notificacion) {
+				?>
+					<div class="col-lg-3 notificacion">
+						<div class="contenidoNotificacion">
+							<h3><?php echo $notificacion->usuarioEmisor ?></h3>
+							<p>
+								<?php echo $notificacion->short_description ?>
+							</p>	
+						</div>
+						
+					</div>	
+				<?php 
+					}
+				?>
+							
+
 			</div>
 		</div>
+		<a href=<?php echo site_url("welcome/logoff") ?>>
+			cerrar sesion
+		</a>
 		<div class="row marginNull">
 			<div class="col-lg-3">
 				

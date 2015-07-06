@@ -18,3 +18,15 @@
 .activeContenido{
 	background: blue;
 }
+.notificacion{
+	
+	
+	
+}
+.notificacion .contenidoNotificacion{
+	background: red;
+	padding-left: 3%;
+	padding-right: 3%;
+	margin-left: 2%;
+	height: 100px;
+}
