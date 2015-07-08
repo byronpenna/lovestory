@@ -13,22 +13,34 @@
 <body>
 	<div class="row marginNull">
 		<div class="row marginNull headerPerfil">
-			<div class="col-lg-4">
+			<div class="col-lg-2 profileInfo">
+				<div class="text-center">
 				<a href=<?php echo site_url("ProfileController/edit/") ?> title="Ir a perfil">
 					<img class="imgPerfil" src=<?php echo $usuario->profilePic ?>>
 				</a>
-				<h3><?php echo $usuario->nombres." ".$usuario->apeliidos ?></h3>
+				<h3><?php echo $usuario->nombres." ".$usuario->apeliidos ?></h3>	
+				
+					<a class="btn btn-success" href=<?php echo site_url("welcome/logoff") ?>>
+						cerrar sesion
+					</a>	
+				</div>
+				
 			</div>
-			<div class="col-lg-8">
+			<div class="col-lg-offset-1 col-lg-8" >
 				<?php 
 					foreach ($notificaciones as $key => $notificacion) {
 				?>
-					<div class="col-lg-3 notificacion">
-						<div class="contenidoNotificacion">
-							<h3><?php echo $notificacion->usuarioEmisor ?></h3>
-							<p>
-								<?php echo $notificacion->short_description ?>
-							</p>	
+					<div class="col-lg-6 notificacion">
+						<div class="contenidoNotificacion backgroundContenidoPubli">
+							<div class="col-lg-4">
+								<img src=<?php echo base_url("resources/img/generales/profle.png") ?>>
+							</div>
+							<div class="col-lg-8 ">
+								<h3><?php echo $notificacion->usuarioEmisor ?></h3>
+								<p>
+									<?php echo $notificacion->short_description ?>
+								</p>	
+							</div>
 						</div>
 						
 					</div>	
@@ -37,9 +49,7 @@
 				?>
 			</div>
 		</div>
-		<a href=<?php echo site_url("welcome/logoff") ?>>
-			cerrar sesion
-		</a>
+		
 		<div class="row marginNull">
 			<div class="col-lg-3">
 
