@@ -6,6 +6,9 @@
 	<!-- estilos -->
 		<link rel="stylesheet" type="text/css" href=<?php echo base_url("resources/css/galeria/style.css") ?> >
 		<link rel="stylesheet" type="text/css" href=<?php echo base_url("resources/css/galeria/media.css") ?> >
+	<!-- scripts -->
+		<script type="text/javascript" src=<?php echo base_url("resources/js/galeria/script.js") ?> ></script>
+		<script type="text/javascript" src=<?php echo base_url("resources/js/galeria/functions.js") ?> ></script>		
 </head>
 <body>
 	<pre>
@@ -29,7 +32,7 @@
 				<?php 
 				if($foto->profile != 1){
 				?>
-				<button>Establecer perfil</button>
+				<button class="btnEstablecerPerfil" fotoid=<?php echo "'".$foto->id_foto."'" ?>>Establecer perfil</button>
 				<?php 
 				}
 				?>

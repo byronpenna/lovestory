@@ -23,6 +23,7 @@ class GaleriaController extends PadreController
 	}
 	function moverFoto($name,$extension){
 		$profileUserFolder 	= PROJECT_PROFILE.$this->_usuarioSession->id_usuario."/";
+		
 		if(!file_exists($profileUserFolder)){
 			mkdir($profileUserFolder);
 		}
@@ -33,6 +34,10 @@ class GaleriaController extends PadreController
 		else{
 			echo " rayos";
 		}
+	}
+	function setPerfilImg(){
+		$frm = $this->getAjaxFrm();
+		echo json_encode($this->_model->setPerfilImg($frm->idFoto,$this->_usuarioSession->id_usuario));
 	}
 	function getFotos($idUsuario){
 		$fotos 	= $this->_model->getFotosById($idUsuario);

@@ -16,15 +16,17 @@
 	<!-- scripts -->
 </head>
 <body>
-
-	<form class="frm" method="post" action=<?php echo site_url("ProfileController/update") ?> enctype="multipart/form-data">
-		
-		<label>Nombre</label>	
-		<input class="form-control" name="txtNombre" value=<?php echo $usuario->nombres ?> >
-		<label>Apellido</label>	
-		<input class="form-control" name="txtApellido" value=<?php echo $usuario->apeliidos ?>>
-		<button class="btn">Actualizar</button>
-		<button class="btn"> Regresar</button>
-	</form>
+	<div class="col-lg-offset-4 col-lg-4">
+		<form class="frm" method="post" action=<?php echo site_url("ProfileController/update") ?> enctype="multipart/form-data">
+			
+			<label>Nombre</label>	
+			<input class="form-control" name="txtNombre" value=<?php echo $usuario->nombres ?> >
+			<label>Apellido</label>	
+			<input class="form-control" name="txtApellido" value=<?php echo $usuario->apeliidos ?>>
+			<button class="btn">Actualizar</button>
+			<button class="btn"> Regresar</button>
+		</form>	
+	</div>
+	
 </body>
 </html>

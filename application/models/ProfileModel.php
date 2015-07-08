@@ -14,7 +14,7 @@ class ProfileModel extends PadreModel
 		if($fileName != ""){
 			$ruta 		= PROJECT_PROFILE.$idUsuario."/".$fileName."";
 			if(file_exists($ruta)){
-				$ruta = "resources/profiles/".$idUsuario."/".$fileName."";
+				$ruta = "resources/perfiles/".$idUsuario."/".$fileName."";
 				$retorno = $ruta;
 			}	
 		}

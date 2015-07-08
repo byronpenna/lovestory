@@ -26,6 +26,21 @@ class GaleriaModel extends PadreModel
 		}
 		return $retorno;
 	}
+	function setPerfilImg($id,$idUsuario){
+		$retorno = new stdClass();
+		$retorno->estado = false;
+		$sql 	= "UPDATE fotos_perfil set profile = 0 where id_usuario_fk = ".$idUsuario."";
+		$sql2 	= "UPDATE fotos_perfil set profile = 1 where id_foto = ".$id."";
+		$this->db->trans_start();
+			$this->db->query($sql);
+			$this->db->query($sql2);
+		$this->db->trans_complete();
+		if ($this->db->trans_status() === true)
+		{
+			$retorno->estado = true;
+		}
+		return $retorno;
+	}
 	function getFotosById($id){
 		
 		$sql = "SELECT * 
