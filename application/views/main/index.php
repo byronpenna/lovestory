@@ -20,7 +20,7 @@
 				</a>
 				<h3><?php echo $usuario->nombres." ".$usuario->apeliidos ?></h3>	
 				
-					<a class="btn btn-success" href=<?php echo site_url("welcome/logoff") ?>>
+					<a class="btn btnLogOff" href=<?php echo site_url("welcome/logoff") ?>>
 						cerrar sesion
 					</a>	
 				</div>
@@ -36,7 +36,7 @@
 								<img src=<?php echo base_url("resources/img/generales/profle.png") ?>>
 							</div>
 							<div class="col-lg-8 ">
-								<h3><?php echo $notificacion->usuarioEmisor ?></h3>
+								<h2><?php echo $notificacion->usuarioEmisor ?></h2>
 								<p>
 									<?php echo $notificacion->short_description ?>
 								</p>	
@@ -68,7 +68,7 @@
 				?>
 			</div>
 			
-			<div class="col-lg-6">
+			<div class="col-lg-6 searchArea">
 				<div class="row marginNull divBusquedaAmigos">
 					<div class="col-lg-10">
 						<input class="form-control txtBuscarPersonas" name="txtBuscarPersonas"  placeholder='buscarar amigos'>	

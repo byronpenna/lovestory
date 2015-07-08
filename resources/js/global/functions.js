@@ -1,5 +1,5 @@
-var RAIZ    = "http://localhost/lovestory/index.php/";
-var BASEURL = "http://localhost/lovestory/";
+var RAIZ    = "http://localhost:82/lovestory/index.php/";
+var BASEURL = "http://localhost:82/lovestory/";
 // serializes
     function serializeSection(section) {
         var frm = serializeToJson(section.find("input,select,textarea").serializeArray());

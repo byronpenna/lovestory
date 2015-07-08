@@ -1,11 +1,45 @@
+.opcionEnviarAlgo{
+	margin-top: 3%;
+}
+.btnPublicar{
+	border-radius: 0;
+	width: 40%;
+	margin: 0 auto;
+	margin-top: 3%;
+	background: #2ECC71;
+	font-weight: bold;
+	color: white;
+
+}
+.divBusquedaAmigos{
+	margin-top: 3%;
+}
+.btnLogOff{
+	background: #2ecc71;
+	color: white;
+	font-weight: bold;
+	border-radius: 0;
+}
 .newsFeed{
-	background: #27ae60;
+	
+	padding-bottom: 5%;
+	height: 100%;
 }
 .contenido{
-	padding-top: 5%;
+	/*padding-top: 5%;*/
+	height: 600px;
+}
+.searchArea{
+	height: 90%;
+}
+.divResultadoBusqueda{
+	height: 90%;
+	overflow-y: scroll;
+	margin-top: 5%;
 }
 .backgroundContenidoPubli{
-	background: #2980b9;
+	/*background: #2980b9;*/
+	background: #27ae60;
 	color: white;
 	text-align: center;
 }
@@ -26,15 +60,31 @@
 }
 .divTarjetaFind{
 	margin-top: 5%;
+	background: #ecf0f1;
+	margin-left: 5%;
+	margin-right: 5%;
+	padding: 5%;
+}
+.divImageProfileFind,.divNombreFind,.divTipoContenido{
+	text-align: center;
+}
+.divTipoContenido{
+	margin-top: 4%;
+	margin-bottom: 4%;
+	padding-top: 2%;
+	padding-bottom: 2%;
 }
 .divTarjetaFind .imgProfileFind{
-	width: 80%;
+	width: 40%;
+
 }
 .activeTarjeta{
-	background: pink;
+	background: #ecf0f1;
 }
 .activeContenido{
-	background: blue;
+	background: #95a5a6;
+	color: white;
+	font-weight: lighter;
 }
 .notificacion{
 }
@@ -52,6 +102,14 @@
 }
 .publicacionNews{
 	height: 150px;
-	background: pink;
+	background: #ecf0f1;
 	margin-top: 5%;
+	text-align: center;
+}
+.publicacionNews h3{
+	font-weight: bold;
+	margin-bottom: 5%;
+}
+.publicacionNews p{
+	font-size: 1.5em;
 }
