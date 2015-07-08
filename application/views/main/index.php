@@ -50,8 +50,8 @@
 			</div>
 		</div>
 		
-		<div class="row marginNull">
-			<div class="col-lg-3">
+		<div class="row marginNull contenido">
+			<div class="col-lg-6 newsFeed">
 
 				
 				<?php 
@@ -67,10 +67,8 @@
 				}
 				?>
 			</div>
-			<div class="col-lg-3">
-				
-			</div>
-			<div class="col-lg-3">
+			
+			<div class="col-lg-6">
 				<div class="row marginNull divBusquedaAmigos">
 					<div class="col-lg-10">
 						<input class="form-control txtBuscarPersonas" name="txtBuscarPersonas"  placeholder='buscarar amigos'>	
