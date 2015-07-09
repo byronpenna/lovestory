@@ -21,6 +21,11 @@ class ProfileModel extends PadreModel
 		$retorno = base_url($retorno);
 		return $retorno;
 	}
+		function updatePerfil(){
+			$this->db->trans_start();
+				$query->
+			$this->db->trans_complete();
+		}
 	// base de datos
 		function findProfile($obj){
 			$retorno 			= new stdClass();

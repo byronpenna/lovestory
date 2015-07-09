@@ -39,7 +39,7 @@ class ProfileController extends PadreController
 			print_r($_FILES);*/
 
 			// file
-				$path 				= $_FILES['flProfilePic']['name'];
+				/*$path 				= $_FILES['flProfilePic']['name'];
 				$extension 			= pathinfo($path, PATHINFO_EXTENSION);
 				$profileUserFolder 	= PROJECT_PROFILE.$this->_usuarioSession->id_usuario."/";
 				if(!file_exists($profileUserFolder)){
@@ -50,7 +50,7 @@ class ProfileController extends PadreController
 					echo " subida exitosamente";
 				}else{
 					echo " rayos";
-				}
+				}*/
 			
 		}
 }
